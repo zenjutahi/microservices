@@ -1,4 +1,4 @@
-package com.microservice.currency.exchange.service.currencyexchangeservice;
+package com.microservice.currency.exchange.service.currencyexchangeservice.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
