@@ -25,7 +25,7 @@ public class CurrencyExchangeController {
             @PathVariable String from, @PathVariable String to
         ) {
         //
-        // Hard codeD data
+        // Hard coded data
 //        CurrencyExchange currencyExchange = new CurrencyExchange(1000L, from, to, BigDecimal.valueOf(50));
 
         CurrencyExchange currencyExchange = repository.findByFromAndTo(from, to);
