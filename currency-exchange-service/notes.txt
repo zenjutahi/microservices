@@ -3,3 +3,25 @@ http://localhost:8000/currency-exchange/from/USD/to/INR
 
 Currency Conversion Service
 http://localhost:8100/currency-conversion/from/USD/to/INR/quantity/10
+
+Eureka
+http://localhost:8761/
+
+API GATEWAY
+use API gateway to access microservices registered with eureka
+http://localhost:8765/
+
+eg link to current-exchange: http://localhost:8765/CURRENCY-EXCHANGE/currency-exchange/from/AUD/to/INR
+eg link to current-conversion: http://localhost:8765/CURRENCY-CONVERSION/currency-conversion/from/USD/to/INR/quantity/10
+link to currency-conversion-feign http://localhost:8765/CURRENCY-CONVERSION/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+adjust url to lowercase
+
+eg link to current-exchange: http://localhost:8765/currency-exchange/currency-exchange/from/AUD/to/INR
+eg link to current-conversion: http://localhost:8765/currency-conversion/currency-conversion/from/USD/to/INR/quantity/10
+link to currency-conversion-feign http://localhost:8765/currency-conversion-feign/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+rerouting from gatewayapi
+http://localhost:8765/currency-exchange/from/AUD/to/INR
+http://localhost:8765/currency-conversion/from/USD/to/INR/quantity/10
+http://localhost:8765/currency-conversion-feign/from/USD/to/INR/quantity/10
