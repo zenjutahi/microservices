@@ -21,9 +21,9 @@ public class CircuitBreakerController {
     @GetMapping("/sample-api")
 //    @Retry(name = "sample-api", fallbackMethod = "hardCodedResponse")
 //    @CircuitBreaker(name="default",fallbackMethod = "hardCodedResponse")
-    // setting up limits to the number of requests per period of time
+//     setting up limits to the number of requests per period of time
 //    @RateLimiter(name="default")
-    // configure maximum number of concurrent calls to api
+//     configure maximum number of concurrent calls to api
     @Bulkhead(name ="default")
     public String sampleApi(){
         logger.info("Sample Api call received");
